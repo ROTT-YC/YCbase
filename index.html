@@ -1,119 +1,163 @@
 <!DOCTYPE html>
+<html  lang="zh-Hant-TW">
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <style type="text/css">
-	.opClass {
-  font-family: "Lato", sans-serif;
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url("https://i.imgur.com/hdfRYLt.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity=1;
-  transition: opacity 1s;
+body{
+background-color:#004e66;
+}
+.container .container-fluid{
+  padding-top:15px;
+  padding-bottom:15px;
+  border-radius:6px;
 }
 
-.bodyClass {
-  font-family: "Lato", sans-serif;
-  background-image:url("https://i.imgur.com/hdfRYLt.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity =0.5;
-  transition: 1s;
+#row-1{
+  padding-top:80px;
+  padding-bottom:20px;
+  background-color:#ffc952;
+  background-image:url("https://i.imgur.com/NaEgmGb.jpg");
+  background-attachment:fixed;
+}
+.intru{
+  padding-left:40px;
+  margin-bottom:20px;
+  color:#fcbe32;
+  text-align: right;
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
+.banner {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  left: calc(60px);
+  width: calc(100% - 120px);
+  padding: 6px 0;
+  text-align: center;
+  color: #FFF;
 }
-#test {
-  transition: margin-left .5s;
-  background: #4CAF50;
-  color: white;
-  padding: 16px;
-  width: 60%;
-  height: 50%;
-  overflow: scroll;
-  border: 5px solid pink;
-  position:fixed; top:25%; left:25%;
+#abilibox{
+  margin-top:50px;
+  text-align:center;
 }
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  margin-left:100px;
-  background-color:#FFF;
-  opacity:0.5;
+.span1{
+  text-align:center;
+    display:block;
 }
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.boxbor{
+  width:230px;
+    padding:15px;
+    border-radius: 10px 100px / 100px;
+    background-color:#7f9eb2;
+    transition: 0.3s;
+    color:#fcbe32;
+}
+.boxbor:hover{
+    border-color:#FFF; 
+    padding:15px;
+  border-radius: 10% / 50%;
+    background-color:#ff7761;
+    color:#FFF;
+}
+.progress{
+  margin-left:20px;
+    width: 160px;
+    height:20px;
+    border: none;
+}
+@media screen and (max-width: 768px) {
+.container .container-fluid{
+padding-top:60px;
+padding-bottom:60px;
+}
+.intru{
+margin:auto;
+}
 }
 </style>
 </head>
-<body id="BK" class="opClass">
+<body>
+<div class="wrap">
+<nav class="nav navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+                <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a class="nav-link" href="#ability">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu1">Page 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu2">Page 2</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<div class="container-fluid" >    
+<div class="row" id="row-1">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+    <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:300px;">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-8" style="background:rgba(100%,100%,100%,0.6);">
+      <div class="intru">
+        <h1>韋雨君</h1>
+        自我介紹<br><br><br><br><br><br>
+      </div>
+    </div>
+</div></div>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
+<div class="banner">Hello✦✦✦</div>
 
-<div id="main">
-  <h2>Sidenav Push Example</h2>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;open</span>	
-</div>
-<div id="test">
-    div分頁新增(不切換頁面更改內容)
-    錨點頁面實作
-    frame 動態按鈕試做
+<div class="container"> 
+  <div class="row" id="ability">
+    <div class="col-xs-12 col-sm-4" id="abilibox">
+    <div class="boxbor">
+      <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:150px;padding-bottom:10px;">
+      <span class="span1">HTML / CSS</span>
+      <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">40%</div>
+      </div>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-4" id="abilibox">
+    <div class="boxbor">
+      <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:150px;padding-bottom:10px;">
+      <span class="span1">text</span>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-4" id="abilibox">
+    <div class="boxbor">
+      <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:150px;padding-bottom:10px;">
+      <span class="span1">text</span>
+    </div>
+    </div>
+  </div>
 </div>
 
 
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("BK").className = "opClass";
-}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "100px";
-  document.getElementById("BK").className = "bodyClass";
-}
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 </script>
-   
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
 </body>
 </html> 
