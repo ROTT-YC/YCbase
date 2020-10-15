@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 <style type="text/css">
 body{
@@ -17,7 +20,16 @@ background-color:#004e66;
   padding-bottom:15px;
   border-radius:6px;
 }
-
+.img-mail{
+  width:60px;
+    position: absolute;
+    right: 0;
+    margin-top:5px;
+    transition:0.1s;
+}
+.img-mail:hover{
+  transform: translateY(10%);
+}
 #row-1{
   padding-top:80px;
   padding-bottom:20px;
@@ -33,24 +45,36 @@ background-color:#004e66;
 }
 
 .banner {
-  position: absolute;
-  left: calc(60px);
-  width: calc(100% - 120px);
-  padding: 6px 0;
-  text-align: center;
-  color: #FFF;
+    position: absolute;
+    left:20%;
+    transform: translateY(10%);
+    color: #FFF;
+}
+.banner h3{
+  position: relative;
+    padding-left:270px;
+}
+.banner h3::before {
+    content: '';
+    width: 250px;
+    height: 10px;
+    background-color:#ffc952;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius:6px;
 }
 #abilibox{
-  margin-top:50px;
+  padding-top:50px;
   text-align:center;
 }
 .p{
   text-align:center;
     display:block;
+    font-size:18px;
 }
 .boxbor{
-  width:230px;
-    padding:15px;
+    padding:25px;
     border-radius: 10px 100px / 100px;
     background-color:#7f9eb2;
     transition: 0.3s;
@@ -58,14 +82,11 @@ background-color:#004e66;
 }
 .boxbor:hover{
     border-color:#FFF; 
-    padding:15px;
     border-radius: 25% / 15%;
     background-color:#ff7761;
     color:#FFF;
 }
 .progress{
-    margin-left:20px;
-    width: 160px;
     height:18px;
     border: none;
 }
@@ -85,6 +106,34 @@ background-color:#004e66;
     left: 40px;
     top: -20px;
 }
+.project{
+  text-align:center;
+  padding-top:80px;
+  max-width:1200px;
+    height:30%;
+    margin:0 auto;
+}
+section{
+  width:50%;
+    float:left;
+}
+.pro-img{
+    overflow:hidden;
+}
+.pro-img img{
+  transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+.pro-img img:hover{
+    transform:scale(1.2,1.2);
+}
+.footer{
+  background-image:url("https://i.imgur.com/NaEgmGb.jpg");
+  background-attachment:fixed;
+    clear:left;
+    height:200px;" 
+}
+
 @media screen and (max-width: 768px) {
 .container .container-fluid{
 padding-top:60px;
@@ -92,6 +141,41 @@ padding-bottom:60px;
 }
 .intru{
 margin:auto;
+}
+.boxbor{
+    padding:25px;
+    border-radius: 10px 100px / 100px;
+    background-color:rgba(100%,100%,100%,0);
+    transition: 0.3s;
+    color:#fcbe32;
+}
+.boxbor:hover{
+    border-color:#FFF;
+    background-color:rgba(100%,100%,100%,0);
+    color:#fcbe32;
+}
+section{
+  width:100%;
+}
+.banner {
+    position: absolute;
+    left:20%;
+    transform: translateY(10%);
+    color: #FFF;
+}
+.banner h3{
+  position: relative;
+    padding-left:200px;
+}
+.banner h3::before {
+    content: '';
+    width: 180px;
+    height: 10px;
+    background-color:#ffc952;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius:6px;
 }
 }
 </style>
@@ -105,13 +189,12 @@ margin:auto;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> 
             </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="#">Resume</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a class="nav-link" href="#ability">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#menu1">Page 1</a></li>
-                <li class="nav-item"><a class="nav-link" href="#menu2">Page 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skill">Skill</a></li>
+                <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
             </ul>
         </div>
     </div>
@@ -133,13 +216,13 @@ margin:auto;
     </div>
 </div></div>
 
-<div class="banner">Hello✦✦✦</div>
+<div class="banner" id="skill"><h3>SKILL✦✦✦</h3></div>
 
-<div class="container"> 
-  <div class="row" id="ability">
+<div class="container" style="padding-top:30px;"> 
+  <div class="row">
     <div class="col-xs-12 col-sm-4" id="abilibox">
     <div class="boxbor">
-      <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:150px;padding-bottom:10px;">
+      <img src="https://i.imgur.com/ukK7tmR.png" style="height:150px;padding-bottom:10px;">
       <p>HTML / CSS</p>
       <div class="progress">
       <div class="progress-bar progress-bar-warning active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">60%</div>
@@ -156,7 +239,7 @@ margin:auto;
     </div>
     <div class="col-xs-12 col-sm-4" id="abilibox">
     <div class="boxbor">
-      <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:150px;padding-bottom:10px;">
+      <img src="https://i.imgur.com/3H5MOmu.png" style="height:150px;padding-bottom:10px;">
       <p>Photoshop</p>
       <div class="progress">
       <div class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%</div>
@@ -173,7 +256,7 @@ margin:auto;
     </div>
     <div class="col-xs-12 col-sm-4" id="abilibox">
     <div class="boxbor">
-      <img src="https://i.imgur.com/naUOaZd.png" class="img-circle" style="height:150px;padding-bottom:10px;">
+      <img src="https://i.imgur.com/dxGPFUP.png" style="height:150px;padding-bottom:10px;">
       <p>Word</p>
       <div class="progress">
       <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">85%</div>
@@ -191,6 +274,28 @@ margin:auto;
   </div>
 </div>
 
+<div class="banner" id="project"><h3>PROJECT✦✦✦</h3></div>
+
+<div class="project">
+<section class="pro-img">
+<img src="https://i.imgur.com/eFX0RoB.jpg" style="width:100%;">
+</section>
+<section>
+<iframe frameborder="0" scrolling="no"
+     width=100% height="337"
+     src="https://drive.google.com/file/d/1WTn0l2R_-i2R_osbziGaTtjhymEUvilc/preview" style="margin-left:5px">
+</iframe>
+</section>
+<div style="width:100%;float:left;">
+<div style="margin:30px auto;border-radius:5px;height:120px;vertical-align：middle">  <p style="font-size:25px;font-family:Microsoft JhengHei;color:#FFF;">經由網頁作為與使用者互動的第一步，<br>將使用者偏好統整匯集搭配適應性函數使用基因演算法在時間內產生最大滿足限制條件的結果。</p></div>
+</div>
+</div>
+
+<div class="footer">
+<div style="width:100%;background:rgba(100%,100%,100%,0.6);height:80px">
+<a href="mailto:maple19196008@gmail.com"><img src="https://i.imgur.com/wlELQlZ.png" class="img-mail" data-aos="flip-left" data-aos-duration ="1200"data-aos-offset ="110"/></a>
+</div>
+</div>
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -207,5 +312,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+<script>AOS.init();</script>
+
 </body>
 </html> 
